@@ -22,7 +22,6 @@ const categories = [
             { name: "Premiere Pro", icon: "🎬" },
             { name: "After Effects", icon: "✨" },
             { name: "DaVinci Resolve", icon: "🎥" },
-            { name: "CapCut", icon: "📱" },
         ],
     },
     {
