@@ -13,21 +13,21 @@ const categories = [
         title: "Graphic Design",
         desc: "Posters, brand identity, logos, infographics, and brand visuals crafted with precision and creativity.",
         href: "/projects/graphic-design",
-        preview: "https://drive.google.com/uc?export=view&id=1JvzP19EiWyu2BI5zgn5S7GToKigbtzff",
+        preview: "https://lh3.googleusercontent.com/d/1JvzP19EiWyu2BI5zgn5S7GToKigbtzff",
     },
     {
         number: "02",
         title: "Video Editing",
         desc: "Cinematic edits, motion graphics, and video content that captivates and tells compelling stories.",
         href: "/projects/video-editing",
-        preview: "https://drive.google.com/uc?export=view&id=1b8F005LaKnuzjtdKf5TA46_4mmEbI2WQ",
+        preview: "https://lh3.googleusercontent.com/d/1b8F005LaKnuzjtdKf5TA46_4mmEbI2WQ",
     },
     {
         number: "03",
         title: "Web Development",
         desc: "Responsive websites and web applications built with modern frameworks and clean architecture.",
         href: "/projects/web-development",
-        preview: "https://drive.google.com/uc?export=view&id=1g4nXksDlzoXBehKE4pJ2FH88nSoW-Isc",
+        preview: "https://lh3.googleusercontent.com/d/1g4nXksDlzoXBehKE4pJ2FH88nSoW-Isc",
     },
 ];
 
