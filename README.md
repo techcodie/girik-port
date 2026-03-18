@@ -1,157 +1,170 @@
 <div align="center">
-  <img src="public/images/hero.png" alt="Hero Banner" width="100%" />
 
-  # <img src="https://api.iconify.design/lucide/rocket.svg?color=%2310b981" width="28" height="28" align="top" /> GreenHacker Portfolio & CMS
+  # ✦ Girik Sain — Portfolio
 
-  **A Next-Generation, Agentic Full-Stack Portfolio Platform**
+  **A Modern, Minimal, Premium Creative Portfolio**
 
   [![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-  [![React](https://img.shields.io/badge/React-19.2-blue?style=for-the-badge&logo=react)](https://reactdev.com/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-  [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+  [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-gray?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+  [![CSS](https://img.shields.io/badge/Vanilla_CSS-Custom-38B2AC?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
   <p align="center">
-    <a href="#key-features"><img src="https://api.iconify.design/lucide/sparkles.svg?color=%2310b981" width="16" height="16" align="top" /> Features</a> •
-    <a href="#tech-stack-breakdown"><img src="https://api.iconify.design/lucide/laptop.svg?color=%2310b981" width="16" height="16" align="top" /> Tech Stack</a> •
-    <a href="#getting-started"><img src="https://api.iconify.design/lucide/rocket.svg?color=%2310b981" width="16" height="16" align="top" /> Quick Start</a> •
-    <a href="#architecture--data-flow"><img src="https://api.iconify.design/lucide/workflow.svg?color=%2310b981" width="16" height="16" align="top" /> Architecture</a> •
-    <a href="#contributing--contact"><img src="https://api.iconify.design/lucide/handshake.svg?color=%2310b981" width="16" height="16" align="top" /> Contact</a>
+    <a href="#features">Features</a> •
+    <a href="#tech-stack">Tech Stack</a> •
+    <a href="#getting-started">Quick Start</a> •
+    <a href="#project-structure">Structure</a> •
+    <a href="#credits">Credits</a>
   </p>
 </div>
 
 ---
 
-## <img src="https://api.iconify.design/lucide/sparkles.svg?color=%2310b981" width="24" height="24" align="top" /> Key Features
+## ✨ About
 
-This platform is more than just a portfolio—it is a comprehensive Content Management System (CMS) designed for modern software engineers.
+A premium, dark-themed creative portfolio website for **Girik Sain** — a multidisciplinary creative specializing in video editing, motion design, graphic design, and responsive website & web application development.
 
-- **<img src="https://api.iconify.design/lucide/globe.svg?color=%2310b981" width="18" height="18" align="top" /> Immersive 3D Experiences**: Native integration of `Three.js` and `React Three Fiber`. Features stunning visual state management and interactive 3D models embedded via Spline.
-- **<img src="https://api.iconify.design/lucide/bot.svg?color=%2310b981" width="18" height="18" align="top" /> Agentic AI Workflows**: Embedded AI interactions powered by `LangChain`, `LangGraph`, and `Google Gemini`. The AI is grounded via `Pinecone` (vector database) using RAG to ensure hallucination-free portfolio queries and automated resume structuring.
-- **<img src="https://api.iconify.design/lucide/bar-chart.svg?color=%2310b981" width="18" height="18" align="top" /> Real-Time Analytics CMS**: Built-in administrative dashboard to manage skills, experiences, and projects. It also tracks user sessions and maps live GitHub contribution insights directly into the UI.
-- **<img src="https://api.iconify.design/lucide/zap.svg?color=%2310b981" width="18" height="18" align="top" /> Blazing Fast Modern Stack**: Built on React 19 and Next.js 16 (App Router) with Tailwind CSS v4, utilizing `Framer Motion` and `GSAP` for silky smooth micro-interactions.
-- **<img src="https://api.iconify.design/lucide/lock.svg?color=%2310b981" width="18" height="18" align="top" /> Enterprise-Grade Security & DB**: End-to-end type safety. Database operations run on `PostgreSQL` powered by `Neon`, strictly managed via `Prisma` ORM, with robust `NextAuth` for admin access.
+Built with a minimal, futuristic, and interactive design language inspired by modern developer portfolios. The site showcases Girik's work across graphic design, video editing, and web development through an immersive browsing experience.
 
 ---
 
-## <img src="https://api.iconify.design/lucide/laptop.svg?color=%2310b981" width="24" height="24" align="top" /> Tech Stack Breakdown
+## 🚀 Features
 
-### Frontend & UI
-![Next JS](https://img.shields.io/badge/Next.js-white?style=for-the-badge&logo=next.js&logoColor=black)
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=for-the-badge&logo=radix-ui&logoColor=white)
-
-### Backend & Database
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-
-### AI, Animation & Magic
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)
-![Threejs](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
-![Framer](https://img.shields.io/badge/Framer_Motion-gray?style=for-the-badge&logo=framer&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+- **Immersive Hero Section** — Bold typography with animated particle background, gradient orbs, and smooth scroll indicator
+- **Interactive Skills Grid** — Categorized skill cards (Graphic Design, Video Editing, Web Development) with hover animations and glow effects
+- **Portfolio Gallery** — Three dedicated project pages with real project images:
+  - **Graphic Design** — Thumbnails, Poster Design, Infographics, Branding (filterable tabs + image modal)
+  - **Video Editing** — Video cards with hover play previews and modal player
+  - **Web Development** — Project cards with tech stack details and live links
+- **Connect Protocol** — Futuristic contact section with social links and a sleek contact form
+- **Smooth Micro-Animations** — Framer Motion powered fade-ins, hover effects, and scroll-based reveals
+- **Fully Responsive** — Optimized for Desktop, Tablet, and Mobile
+- **Dark Theme** — Premium black background with neon green (#00ffa3) accent highlights
+- **Canvas Particle Background** — Animated interconnected particles on the hero section
 
 ---
 
-## <img src="https://api.iconify.design/lucide/workflow.svg?color=%2310b981" width="24" height="24" align="top" /> Architecture & Data Flow
+## 🛠️ Tech Stack
 
-The application follows a highly normalized relational schema optimized for auditability and complex state management.
-
-- **Public Interface**: An immersive frontend experience optimized for conversion. Exposes contact APIs, GitHub metrics mapping, and streaming endpoints for LangGraph-powered AI chats.
-- **Administrative Command Center**: A secure `NextAuth` protected segment used for CMS operations. Direct connection routes perform complex DB mutations and metrics aggregation.
-- **AI Orchestration**: Orchestrates LLMs via `LangChain` to streamline professional tasks, draft documents, and retrieve grounded knowledge vectors from `Pinecone`.
+| Layer | Technologies |
+|-------|-------------|
+| **Framework** | Next.js 16 (App Router) |
+| **UI Library** | React 19 |
+| **Styling** | Vanilla CSS with CSS Custom Properties |
+| **Animations** | Framer Motion |
+| **Typography** | Inter, Space Grotesk (Google Fonts) |
+| **Images** | Next.js Image (optimized, local + Google Drive) |
+| **Deployment** | Netlify / Vercel |
 
 ---
 
-## <img src="https://api.iconify.design/lucide/rocket.svg?color=%2310b981" width="24" height="24" align="top" /> Getting Started
+## 📂 Project Structure
 
-Ensure you have `Node.js` (v18+) and your package manager of choice installed.
+```
+girik-port/
+├── public/
+│   └── projects/          # Project images
+│       ├── thumbnails/    # YouTube thumbnail designs
+│       ├── posters/       # Poster design artworks
+│       ├── infographics/  # Infographic designs
+│       └── branding/      # Brand identity & collateral
+├── src/
+│   ├── app/
+│   │   ├── globals.css    # Complete design system & styles
+│   │   ├── layout.js      # Root layout with SEO metadata
+│   │   ├── page.js        # Homepage (Hero + About + Skills + Projects + Contact)
+│   │   └── projects/
+│   │       ├── graphic-design/page.jsx   # Graphic design gallery with tabs
+│   │       ├── video-editing/page.jsx    # Video editing showcase
+│   │       └── web-development/page.jsx  # Web projects with detail modals
+│   └── components/
+│       ├── Navbar.jsx             # Fixed nav with scroll detection & mobile menu
+│       ├── Hero.jsx               # Hero with particles, gradients, CTAs
+│       ├── About.jsx              # Bio section with animated stat cards
+│       ├── Skills.jsx             # Categorized skill grid with hover effects
+│       ├── Projects.jsx           # Project category cards linking to pages
+│       ├── Contact.jsx            # Connect Protocol (socials + contact form)
+│       ├── Footer.jsx             # Footer with credits
+│       └── ParticleBackground.jsx # Canvas particle animation
+├── next.config.mjs        # Next.js config with remote image patterns
+├── package.json           # Dependencies & scripts
+└── README.md
+```
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm or yarn
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/GreenHacker420/portfolio.git
-cd portfolio
+git clone https://github.com/techcodie/girik-port.git
+cd girik-port
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
-### 3. Database Setup
-Push the Prisma schema to your configured Neon PostgreSQL database.
-```bash
-npx prisma db push
-```
+### 3. Start the development server
 
-### 4. Start Development Server
 ```bash
 npm run dev
 ```
 
-<img src="https://api.iconify.design/lucide/check-circle.svg?color=%2310b981" width="18" height="18" align="top" /> **Locally Accessible!** Your application will now be running at `http://localhost:3000`.
+✅ Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
 ---
 
-## <img src="https://api.iconify.design/lucide/settings.svg?color=%2310b981" width="24" height="24" align="top" /> Environment Configuration
+## 📜 Available Scripts
 
-To run the application fully (including AI, database, and email workflows), set the following keys in your `.env` file:
-
-| Variable | Description |
-| :--- | :--- |
-| `DATABASE_URL` | Neon PostgreSQL pooled connection string. |
-| `NEXTAUTH_SECRET` | Secret hash used for session encryption. |
-| `GITHUB_TOKEN` | Personal Access Token to map contribution data. |
-| `GEMINI_API_KEY` | Key for Google Gemini LLM workflows. |
-| `PINECONE_API_KEY` | Key for vector similarity indexing. |
-| `SMTP_...` | Mail server configs (Host, Port, User, Pass). |
-| `AZURE_CLIENT_ID` | Microsoft Graph API integrations. |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Next.js development server |
+| `npm run build` | Create optimized production build |
+| `npm run start` | Serve the production build locally |
+| `npm run lint` | Run ESLint checks |
 
 ---
 
-## <img src="https://api.iconify.design/lucide/folder-tree.svg?color=%2310b981" width="24" height="24" align="top" /> Detailed Project Structure
+## 🎨 Design Principles
 
-```bash
-portfolio
- ┣ public/          # Static assets, hero images, and Spline 3D Models
- ┣ prisma/          # Database definitions (schema.prisma, config)
- ┣ src/             # Core application
- ┃ ┣ actions/       # Next.js Server Actions handling backend mutations
- ┃ ┣ app/           # App Router directory (Pages, Layouts, API Routes)
- ┃ ┣ components/    # Reusable modular UI components (Radix UI wrappers)
- ┃ ┣ data/          # Mock data and static fallback definitions
- ┃ ┣ emails/        # Transactional email React templates
- ┃ ┣ hooks/         # Custom React hooks (e.g., animation, state)
- ┃ ┣ lib/           # Core utilities Setup (DB Client, Pinecone, LLM instances)
- ┃ ┣ sections/      # Complex page segments (About Me, Hero, Work Experience)
- ┃ ┣ services/      # Abstractions for 3rd party APIs (GitHub, Microsoft Graph)
- ┃ ┗ store/         # Zustand global client-state management
- ┣ eslint.config.mjs# Linting definitions
- ┣ package.json     # Dependency tracking and executable scripts
- ┗ tailwind.config  # Custom Tailwind styling overrides
-```
+- **Minimal & Spacious** — Clean layout with generous whitespace
+- **Dark & Premium** — Pure black background (#050505) with neon green accents (#00ffa3)
+- **Modern Typography** — Inter for body, Space Grotesk for headings
+- **Glassmorphism** — Subtle frosted-glass card effects with border highlights
+- **Micro-Interactions** — Hover animations, scroll reveals, spring physics
+- **Grid-Based Layout** — Consistent responsive grid system
 
 ---
 
-## <img src="https://api.iconify.design/lucide/terminal-square.svg?color=%2310b981" width="24" height="24" align="top" /> Available CLI Commands
+## 🖥️ Sections
 
-- `npm run dev` — Boots Next.js development server.
-- `npm run build` — Formats code, generates Prisma client types, and creates the optimized production build.
-- `npm run start` — Hosts the generated production build locally.
-- `npm run lint` — Validates code against custom ESLint rules.
+| # | Section | Description |
+|---|---------|-------------|
+| 1 | **Hero** | Large name display, role badges, particle background, CTAs |
+| 2 | **About** | Bio text with highlighted keywords + animated stat cards |
+| 3 | **Skills** | Categorized grid — Graphic Design, Video Editing, Web Dev |
+| 4 | **Projects** | Three category cards linking to dedicated project pages |
+| 5 | **Connect Protocol** | Social links (Email, LinkedIn, Instagram, GitHub) + contact form |
 
 ---
 
-## <img src="https://api.iconify.design/lucide/handshake.svg?color=%2310b981" width="24" height="24" align="top" /> Contributing & Contact
+## 👤 Credits
 
-Found a bug or want to suggest an improvement? Feel free to open an issue or submit a Pull Request!
+- **Portfolio Owner:** [Girik Sain](https://github.com/techcodie)
+- **Built by:** [ANSH BAHETI](https://github.com/techcodie)
+- **Design Inspiration:** [GreenHacker](https://greenhacker.in)
 
-- **Creator / Developer:** [GreenHacker420](https://github.com/GreenHacker420)
-- **License:** Licensed under the MIT License
+---
 
 <p align="center">
-  <i>If you enjoy this visual style, consider leaving a <img src="https://api.iconify.design/lucide/star.svg?color=%2310b981" width="16" height="16" align="top" /> on the repository!</i>
+  <sub>Made with 💚 by <strong>ANSH BAHETI</strong></sub>
 </p>

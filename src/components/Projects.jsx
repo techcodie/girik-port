@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -13,21 +14,21 @@ const categories = [
         title: "Graphic Design",
         desc: "Thumbnails, poster designs, infographics, and brand visuals crafted with precision and creativity.",
         href: "/projects/graphic-design",
-        gradient: "linear-gradient(135deg, #1a1a2e 0%, #0a0a1a 100%)",
+        preview: "/projects/posters/dharma.png",
     },
     {
         number: "02",
         title: "Video Editing",
         desc: "Cinematic edits, motion graphics, and video content that captivates and tells compelling stories.",
         href: "/projects/video-editing",
-        gradient: "linear-gradient(135deg, #1a2e1a 0%, #0a1a0a 100%)",
+        preview: "/projects/posters/exoform.png",
     },
     {
         number: "03",
         title: "Web Development",
         desc: "Responsive websites and web applications built with modern frameworks and clean architecture.",
         href: "/projects/web-development",
-        gradient: "linear-gradient(135deg, #2e1a1a 0%, #1a0a0a 100%)",
+        preview: "/projects/posters/sync.png",
     },
 ];
 
@@ -53,38 +54,21 @@ export default function Projects() {
                                 whileHover={{ y: -6 }}
                                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
                             >
-                                <div
-                                    style={{
-                                        width: "100%",
-                                        height: 220,
-                                        background: cat.gradient,
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        position: "relative",
-                                        overflow: "hidden",
-                                    }}
-                                >
-                                    <span
-                                        style={{
-                                            fontFamily: "var(--font-display)",
-                                            fontSize: "6rem",
-                                            fontWeight: 800,
-                                            color: "rgba(255,255,255,0.04)",
-                                            letterSpacing: "-0.04em",
-                                            userSelect: "none",
-                                        }}
-                                    >
-                                        {cat.number}
-                                    </span>
+                                <div style={{ width: "100%", height: 220, position: "relative", overflow: "hidden" }}>
+                                    <Image
+                                        src={cat.preview}
+                                        alt={cat.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        style={{ objectFit: "cover", transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
+                                        className="project-category__image"
+                                    />
                                     <div
                                         style={{
                                             position: "absolute",
-                                            bottom: 0,
-                                            left: 0,
-                                            right: 0,
-                                            height: "60%",
-                                            background: "linear-gradient(to top, var(--bg-primary), transparent)",
+                                            inset: 0,
+                                            background: "linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.95) 100%)",
+                                            pointerEvents: "none",
                                         }}
                                     />
                                 </div>
