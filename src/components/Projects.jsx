@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -12,23 +11,23 @@ const categories = [
     {
         number: "01",
         title: "Graphic Design",
-        desc: "Thumbnails, poster designs, infographics, and brand visuals crafted with precision and creativity.",
+        desc: "Posters, brand identity, logos, infographics, and brand visuals crafted with precision and creativity.",
         href: "/projects/graphic-design",
-        preview: "/projects/posters/dharma.png",
+        preview: "https://drive.google.com/uc?export=view&id=1JvzP19EiWyu2BI5zgn5S7GToKigbtzff",
     },
     {
         number: "02",
         title: "Video Editing",
         desc: "Cinematic edits, motion graphics, and video content that captivates and tells compelling stories.",
         href: "/projects/video-editing",
-        preview: "/projects/posters/exoform.png",
+        preview: "https://drive.google.com/uc?export=view&id=1b8F005LaKnuzjtdKf5TA46_4mmEbI2WQ",
     },
     {
         number: "03",
         title: "Web Development",
         desc: "Responsive websites and web applications built with modern frameworks and clean architecture.",
         href: "/projects/web-development",
-        preview: "/projects/posters/sync.png",
+        preview: "https://drive.google.com/uc?export=view&id=1g4nXksDlzoXBehKE4pJ2FH88nSoW-Isc",
     },
 ];
 
@@ -55,12 +54,16 @@ export default function Projects() {
                                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
                             >
                                 <div style={{ width: "100%", height: 220, position: "relative", overflow: "hidden" }}>
-                                    <Image
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
                                         src={cat.preview}
                                         alt={cat.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                        style={{ objectFit: "cover", transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                            objectFit: "cover",
+                                            transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+                                        }}
                                         className="project-category__image"
                                     />
                                     <div

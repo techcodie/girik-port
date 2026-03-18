@@ -2,173 +2,180 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const tabs = ["All", "Thumbnails", "Poster Design", "Infographics", "Branding"];
+const tabs = ["All", "Poster Design", "Brand Identity", "Logos", "Infographics"];
 
 const projects = [
-    // Thumbnails
-    {
-        id: 1,
-        title: "Crush Them — YouTube Thumbnail",
-        category: "Thumbnails",
-        description: "Bold, high-impact YouTube thumbnail designed for maximum click-through rate.",
-        image: "https://drive.google.com/uc?export=view&id=1If8omhAY3k3yK4IgG6pTmlfEf1pYM7ta",
-    },
-
     // Posters
     {
-        id: 2,
-        title: "Abstract Geometry",
+        id: 1,
+        title: "Poster Design — I",
         category: "Poster Design",
-        description: "Abstract geometric poster exploring form, color, and depth with minimalist composition.",
-        image: "/projects/posters/abstract.png",
+        description: "Bold poster design with striking visuals and creative composition.",
+        image: "https://drive.google.com/uc?export=view&id=1JvzP19EiWyu2BI5zgn5S7GToKigbtzff",
+    },
+    {
+        id: 2,
+        title: "Poster Design — II",
+        category: "Poster Design",
+        description: "Dynamic poster exploring color, form, and visual storytelling.",
+        image: "https://drive.google.com/uc?export=view&id=145kZ0NhX6HNWQ_eimsjAN8ja8ZMH4L69",
     },
     {
         id: 3,
-        title: "Dharma",
+        title: "Poster Design — III",
         category: "Poster Design",
-        description: "Cultural art poster blending traditional Indian aesthetics with modern design language.",
-        image: "/projects/posters/dharma.png",
+        description: "Creative poster blending modern aesthetics with impactful messaging.",
+        image: "https://drive.google.com/uc?export=view&id=13y6qA4ymVMy2I-TNPR4JI1AUlYWzA_lg",
     },
     {
         id: 4,
-        title: "Exoform",
+        title: "Poster Design — IV",
         category: "Poster Design",
-        description: "Futuristic digital art poster with sci-fi inspired elements and dynamic composition.",
-        image: "/projects/posters/exoform.png",
+        description: "Expressive poster design with bold typography and high-contrast imagery.",
+        image: "https://drive.google.com/uc?export=view&id=1oHvnmiRonGRLmz3KARd4RdbRiXRww41p",
     },
     {
         id: 5,
-        title: "See Through",
+        title: "Poster Design — V",
         category: "Poster Design",
-        description: "Experimental transparency-themed poster with layered visual elements.",
-        image: "/projects/posters/see-through.png",
+        description: "Visually captivating poster with layered elements and attention to detail.",
+        image: "https://drive.google.com/uc?export=view&id=1boajk4Iq9d4FzGjUEc1i6AvwTzGz1Ez1",
     },
     {
         id: 6,
-        title: "Shivaay",
+        title: "Poster Design — VI",
         category: "Poster Design",
-        description: "Mythological poster design featuring Lord Shiva with intense visual storytelling.",
-        image: "/projects/posters/shivaay.png",
+        description: "Artistic poster featuring a unique visual concept and refined composition.",
+        image: "https://drive.google.com/uc?export=view&id=1Sl5kWIMzNChWb9SqasTyvqdEw2ESUjB_",
     },
     {
         id: 7,
-        title: "Sparta",
+        title: "Poster Design — VII",
         category: "Poster Design",
-        description: "Warrior-themed poster with bold typography and high-contrast imagery.",
-        image: "/projects/posters/sparta.png",
+        description: "Minimalist poster design with powerful visual impact and clean layout.",
+        image: "https://drive.google.com/uc?export=view&id=12WzcO8kvQIwDmU-CwB06AcpK5KRyqgVn",
     },
+
+    // Brand Identity
     {
         id: 8,
-        title: "Sync",
-        category: "Poster Design",
-        description: "Tech-inspired poster design exploring the concept of digital synchronization.",
-        image: "/projects/posters/sync.png",
+        title: "Brand Identity — I",
+        category: "Brand Identity",
+        description: "Complete brand identity design with logo, color palette, and visual guidelines.",
+        image: "https://drive.google.com/uc?export=view&id=1b8F005LaKnuzjtdKf5TA46_4mmEbI2WQ",
+    },
+    {
+        id: 9,
+        title: "Brand Identity — II",
+        category: "Brand Identity",
+        description: "Alternative brand identity exploration with different color and typography direction.",
+        image: "https://drive.google.com/uc?export=view&id=1op2dDM-RAXzvLwz4lXJXneEoGyNW1NbC",
+    },
+    {
+        id: 10,
+        title: "Brand Identity — III",
+        category: "Brand Identity",
+        description: "Brand identity iteration refining visual language and brand consistency.",
+        image: "https://drive.google.com/uc?export=view&id=1Oo37qNH4WY5A1YHK2sbYnVE4tu-4tlY8",
+    },
+    {
+        id: 11,
+        title: "Brand Identity — IV",
+        category: "Brand Identity",
+        description: "Cohesive brand design system with consistent visual elements across touchpoints.",
+        image: "https://drive.google.com/uc?export=view&id=1pz4WDgKSV6Ufnl9xP7zXCzU7iIVIskFt",
+    },
+    {
+        id: 12,
+        title: "Brand Identity — V",
+        category: "Brand Identity",
+        description: "Extended brand design with additional collateral and marketing materials.",
+        image: "https://drive.google.com/uc?export=view&id=1_Fy4vf-7Q5pLUv4tKcitQNAfFEOpjcmu",
+    },
+    {
+        id: 13,
+        title: "Brand Identity — VI",
+        category: "Brand Identity",
+        description: "Brand design package with digital and print-ready assets.",
+        image: "https://drive.google.com/uc?export=view&id=11k6Ot4XyYN1tfrCdmu-0CoK6HlSEw_37",
+    },
+    {
+        id: 14,
+        title: "Brand Identity — VII",
+        category: "Brand Identity",
+        description: "Product packaging and branding design with bold visuals and eye-catching layout.",
+        image: "https://drive.google.com/uc?export=view&id=1sFodagYex8f_SN7pcS4wMVBPfPsMnvi8",
+    },
+    {
+        id: 15,
+        title: "Brand Identity — VIII",
+        category: "Brand Identity",
+        description: "Social media branding with vibrant colors and playful typography.",
+        image: "https://drive.google.com/uc?export=view&id=1rdLkEkAD17cDbqDPJQ-toCePukgOE0SN",
+    },
+    {
+        id: 16,
+        title: "Brand Identity — IX",
+        category: "Brand Identity",
+        description: "Festive branding design with traditional motifs and modern layout.",
+        image: "https://drive.google.com/uc?export=view&id=1j70CSEoq-dlRlMqmD5cRtudFNuIoYFWa",
+    },
+
+    // Logos
+    {
+        id: 17,
+        title: "Logo Design — I",
+        category: "Logos",
+        description: "Clean, modern logo design with strong brand identity and versatile application.",
+        image: "https://drive.google.com/uc?export=view&id=1g4nXksDlzoXBehKE4pJ2FH88nSoW-Isc",
+    },
+    {
+        id: 18,
+        title: "Logo Design — II",
+        category: "Logos",
+        description: "Minimalist logo concept with distinctive mark and professional appeal.",
+        image: "https://drive.google.com/uc?export=view&id=1fuNWoksU4vmB-Jh4tOuCK5m5Q6on-c5h",
+    },
+    {
+        id: 19,
+        title: "Logo Design — III",
+        category: "Logos",
+        description: "Creative logo exploration with unique visual identity and brand personality.",
+        image: "https://drive.google.com/uc?export=view&id=1R4CxO-w1b_6H0jh-7GfE4Ng_tXsGwU3a",
+    },
+    {
+        id: 20,
+        title: "Logo Design — IV",
+        category: "Logos",
+        description: "Bold logo design with geometric elements and contemporary style.",
+        image: "https://drive.google.com/uc?export=view&id=1IhoYaEun8oNjLO8nLVljfK-tMj75RO7s",
     },
 
     // Infographics
     {
-        id: 9,
-        title: "Dhanlaxmi Post",
-        category: "Infographics",
-        description: "Festive social media infographic with rich visual storytelling and brand consistency.",
-        image: "/projects/infographics/dhanlaxmi.png",
-    },
-    {
-        id: 10,
-        title: "Ramji Post",
-        category: "Infographics",
-        description: "Cultural social media content design with engaging visuals and typography.",
-        image: "/projects/infographics/ramji-post.png",
-    },
-    {
-        id: 11,
-        title: "Ramji Post Reel",
-        category: "Infographics",
-        description: "Reel-format social media graphic optimized for Instagram engagement.",
-        image: "/projects/infographics/ramji-post-re.png",
-    },
-    {
-        id: 12,
-        title: "Rasraj",
-        category: "Infographics",
-        description: "Product branding infographic with detailed visual hierarchy and information design.",
-        image: "/projects/infographics/rasraj.png",
-    },
-
-    // Branding
-    {
-        id: 13,
-        title: "Brand Identity — Concept 1",
-        category: "Branding",
-        description: "Complete brand identity design with logo, color palette, and visual guidelines.",
-        image: "/projects/branding/brand-identity-1.png",
-    },
-    {
-        id: 14,
-        title: "Brand Identity — Concept 2",
-        category: "Branding",
-        description: "Alternative brand identity exploration with different color and typography direction.",
-        image: "/projects/branding/brand-identity-2.png",
-    },
-    {
-        id: 15,
-        title: "Brand Identity — Concept 3",
-        category: "Branding",
-        description: "Third brand identity iteration refining visual language and brand consistency.",
-        image: "/projects/branding/brand-identity-3.png",
-    },
-    {
-        id: 16,
-        title: "Brand Design — Series A",
-        category: "Branding",
-        description: "Cohesive brand design system with consistent visual elements across touchpoints.",
-        image: "/projects/branding/brand-design-1.png",
-    },
-    {
-        id: 17,
-        title: "Brand Design — Series B",
-        category: "Branding",
-        description: "Extended brand design with additional collateral and marketing materials.",
-        image: "/projects/branding/brand-design-2.png",
-    },
-    {
-        id: 18,
-        title: "Brand Design — Series C",
-        category: "Branding",
-        description: "Final brand design package with digital and print-ready assets.",
-        image: "/projects/branding/brand-design-3.png",
-    },
-    {
-        id: 19,
-        title: "Box Cap Sticker Design",
-        category: "Branding",
-        description: "Product packaging sticker design with bold branding and eye-catching layout.",
-        image: "/projects/branding/box-cap-sticker.png",
-    },
-    {
-        id: 20,
-        title: "Nutsy — Social Media Banner",
-        category: "Branding",
-        description: "Facebook banner design for Nutsy brand with vibrant colors and playful typography.",
-        image: "/projects/branding/nutsy-banner.png",
-    },
-    {
         id: 21,
-        title: "Navratri — Festival Branding",
-        category: "Branding",
-        description: "Festive branding design for Navratri celebration with traditional motifs and modern layout.",
-        image: "/projects/branding/navratri.png",
+        title: "Infographic Design — I",
+        category: "Infographics",
+        description: "Engaging infographic with rich visual storytelling and clear information hierarchy.",
+        image: "https://drive.google.com/uc?export=view&id=1ESp9uWlt7rlbQ2v7FkiyFVZxq80slD_i",
     },
     {
         id: 22,
-        title: "Thank You Card",
-        category: "Branding",
-        description: "Elegant thank you card design for client gifting and brand appreciation.",
-        image: "/projects/branding/thank-you-card.png",
+        title: "Infographic Design — II",
+        category: "Infographics",
+        description: "Social media infographic with engaging visuals and compelling typography.",
+        image: "https://drive.google.com/uc?export=view&id=1VMZf65MKnX-oknodbXaeHKJ_HqLJBePB",
+    },
+    {
+        id: 23,
+        title: "Infographic Design — III",
+        category: "Infographics",
+        description: "Product-focused infographic with detailed visual hierarchy and information design.",
+        image: "https://drive.google.com/uc?export=view&id=1MEiu5h3k6IYOBoVquETTQ-RIfvkDokhA",
     },
 ];
 
@@ -250,13 +257,13 @@ export default function GraphicDesignPage() {
                             onClick={() => setSelectedProject(project)}
                         >
                             <div className="project-card__image-wrap">
-                                <Image
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
                                     src={project.image}
                                     alt={project.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="project-card__image"
-                                    style={{ objectFit: "cover" }}
+                                    style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }}
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="project-card__content">
@@ -292,12 +299,11 @@ export default function GraphicDesignPage() {
                             style={{ maxWidth: 1000 }}
                         >
                             <div style={{ position: "relative", width: "100%", aspectRatio: "16/10", background: "var(--bg-secondary)" }}>
-                                <Image
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
                                     src={selectedProject.image}
                                     alt={selectedProject.title}
-                                    fill
-                                    style={{ objectFit: "contain" }}
-                                    sizes="(max-width: 1000px) 100vw, 1000px"
+                                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
                                 />
                             </div>
                             <div style={{ padding: "24px 32px" }}>

@@ -8,45 +8,51 @@ import Footer from "@/components/Footer";
 const videos = [
     {
         id: 1,
-        title: "Cinematic Travel Reel",
+        title: "Video Edit — I",
         category: "Cinematic",
-        duration: "2:34",
-        gradient: "linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%)",
+        embedUrl: "https://drive.google.com/file/d/1-LpsMArPq8CYgsgnVrEkocS2tAwts4Ne/preview",
     },
     {
         id: 2,
-        title: "Product Launch Teaser",
+        title: "Video Edit — II",
         category: "Commercial",
-        duration: "0:45",
-        gradient: "linear-gradient(135deg, #141414 0%, #2e1a1a 100%)",
+        embedUrl: "https://drive.google.com/file/d/1eJQsnyvkMq1nxk14hiiBfSLDgvwEJK-n/preview",
     },
     {
         id: 3,
-        title: "Music Video Edit",
-        category: "Music",
-        duration: "3:12",
-        gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%)",
+        title: "Video Edit — III",
+        category: "Motion",
+        embedUrl: "https://drive.google.com/file/d/1s-UHKJtkdx67i3kfRb3WuO6lCi9mTuTz/preview",
     },
     {
         id: 4,
-        title: "Social Media Reel Pack",
+        title: "Video Edit — IV",
         category: "Social Media",
-        duration: "0:30",
-        gradient: "linear-gradient(135deg, #1a1a0a 0%, #2e2e1a 100%)",
+        embedUrl: "https://drive.google.com/file/d/11NDc3Pthoi0NlFssx3bPpTPIsN-Wdqv3/preview",
     },
     {
         id: 5,
-        title: "Event Highlights Montage",
+        title: "Video Edit — V",
         category: "Events",
-        duration: "1:45",
-        gradient: "linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 100%)",
+        embedUrl: "https://drive.google.com/file/d/1de1yhIsGL7Fu82ao67UXk7alMI17en4j/preview",
     },
     {
         id: 6,
-        title: "Motion Graphics Showreel",
+        title: "Video Edit — VI",
         category: "Motion",
-        duration: "1:20",
-        gradient: "linear-gradient(135deg, #1a0a1a 0%, #2e1a2e 100%)",
+        embedUrl: "https://drive.google.com/file/d/1kOK6UNPz-nniHaVMDEqvSLuOiKevsUkI/preview",
+    },
+    {
+        id: 7,
+        title: "Video Edit — VII",
+        category: "Cinematic",
+        embedUrl: "https://drive.google.com/file/d/19J0V2lDEH4bpQX3bBTy8smGJItNCCV5C/preview",
+    },
+    {
+        id: 8,
+        title: "Video Edit — VIII",
+        category: "Commercial",
+        embedUrl: "https://drive.google.com/file/d/1Ey5dYVrTPFBqxJrBjE6e8CZdPBnTbGyf/preview",
     },
 ];
 
@@ -103,26 +109,18 @@ export default function VideoEditingPage() {
                             onClick={() => setSelectedVideo(video)}
                         >
                             <div className="video-card__preview">
-                                <div
+                                <iframe
+                                    src={video.embedUrl}
                                     style={{
                                         width: "100%",
                                         height: "100%",
-                                        background: video.gradient,
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
+                                        border: "none",
+                                        pointerEvents: "none",
                                     }}
-                                >
-                                    <span style={{
-                                        fontSize: "3rem",
-                                        opacity: 0.2,
-                                        fontWeight: 800,
-                                        fontFamily: "var(--font-display)",
-                                        color: "#fff",
-                                    }}>
-                                        🎬
-                                    </span>
-                                </div>
+                                    allow="autoplay"
+                                    loading="lazy"
+                                    title={video.title}
+                                />
                                 <div className="video-card__play-icon">
                                     <div className="video-card__play-circle">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -134,7 +132,7 @@ export default function VideoEditingPage() {
                             <div className="video-card__content">
                                 <h3 className="video-card__title">{video.title}</h3>
                                 <span className="video-card__meta">
-                                    {video.category} • {video.duration}
+                                    {video.category}
                                 </span>
                             </div>
                         </motion.div>
@@ -166,28 +164,30 @@ export default function VideoEditingPage() {
                             transition={{ duration: 0.3 }}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <div
-                                style={{
-                                    aspectRatio: "16/9",
-                                    background: selectedVideo.gradient,
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    gap: 16,
-                                }}
-                            >
-                                <span style={{ fontSize: "4rem" }}>🎬</span>
-                                <span style={{
+                            <div style={{ aspectRatio: "16/9", background: "#000" }}>
+                                <iframe
+                                    src={selectedVideo.embedUrl}
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        border: "none",
+                                    }}
+                                    allow="autoplay; encrypted-media"
+                                    allowFullScreen
+                                    title={selectedVideo.title}
+                                />
+                            </div>
+                            <div style={{ padding: "24px 32px" }}>
+                                <h2 style={{
                                     fontFamily: "var(--font-display)",
-                                    fontSize: "1.2rem",
-                                    fontWeight: 600,
-                                    color: "#fff",
+                                    fontSize: "1.4rem",
+                                    fontWeight: 700,
+                                    margin: "8px 0",
                                 }}>
                                     {selectedVideo.title}
-                                </span>
+                                </h2>
                                 <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                                    {selectedVideo.category} • {selectedVideo.duration}
+                                    {selectedVideo.category}
                                 </span>
                             </div>
                         </motion.div>
