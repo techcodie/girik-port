@@ -1,29 +1,31 @@
-import SmoothScroll from "@/components/layout/SmoothScroll";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import ChatWidget from "@/components/ui/ChatWidget";
-import { AuthProvider } from "@/components/providers/AuthProvider";
-import siteMetadata from "./metadata";
-import TrackerScript from "@/components/analytics/TrackerScript";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = siteMetadata;
+export const metadata = {
+    title: "Girik Sain — Creative Developer & Visual Designer",
+    description:
+        "Portfolio of Girik Sain — multidisciplinary creative specializing in video editing, motion design, graphic design, and web development.",
+    keywords: [
+        "Girik Sain",
+        "portfolio",
+        "creative developer",
+        "visual designer",
+        "video editor",
+        "motion design",
+        "web development",
+    ],
+    authors: [{ name: "Girik Sain" }],
+    openGraph: {
+        title: "Girik Sain — Creative Developer & Visual Designer",
+        description:
+            "Multidisciplinary creative specializing in video editing, motion design, graphic design, and web development.",
+        type: "website",
+    },
+};
 
 export default function RootLayout({ children }) {
-    // TrackerScript is a Client Component that returns null and safely uses useEffect
-
     return (
-        <html lang="en" className="dark" suppressHydrationWarning>
-            <body className={inter.className}>
-                <AuthProvider>
-                    <SmoothScroll>
-                        {children}
-                    </SmoothScroll>
-                    <TrackerScript />
-                    <ChatWidget />
-                </AuthProvider>
-            </body>
+        <html lang="en">
+            <body>{children}</body>
         </html>
     );
 }
