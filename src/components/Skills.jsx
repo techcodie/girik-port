@@ -78,3 +78,5 @@ export default function Skills() {
         </section>
     );
 }
+
+// Skills section last updated: April 2026
